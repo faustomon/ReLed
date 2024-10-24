@@ -1,0 +1,16 @@
+# Directorios de construcción
+build/
+debug/
+release/
+
+# Archivos de Qt Creator
+*.user
+.qmake.stash
+.pro.user
+
+# Archivos temporales
+*.autosave
+*.swp
+*.bak
+.DS_Store
+Thumbs.db
