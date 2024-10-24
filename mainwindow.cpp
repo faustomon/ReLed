@@ -38,6 +38,7 @@ MainWindow::~MainWindow()
 void MainWindow::on_Btn_Home_clicked()
 {
     ui->Windows_Widget->setCurrentIndex(HOME);
+
 }
 
 
@@ -50,24 +51,28 @@ void MainWindow::on_Btn_Menu_1_clicked()
 
     // Llamar a la función con el estado actual
     on_CheckBox_TimeZoneEnable_checkStateChanged(currentState);
+
 }
 
 
 void MainWindow::on_Btn_Menu_2_clicked()
 {
     ui->Windows_Widget->setCurrentIndex(ALARM);
+
 }
 
 
 void MainWindow::on_Btn_Menu_3_clicked()
 {
     ui->Windows_Widget->setCurrentIndex(TIMER);
+
 }
 
 
 void MainWindow::on_Btn_Menu_4_clicked()
 {
     ui->Windows_Widget->setCurrentIndex(CRONO);
+
 }
 
 
@@ -76,19 +81,20 @@ void MainWindow::on_Btn_Menu_5_clicked()
     ui->Windows_Widget->setCurrentIndex(CLIMA);
 
     MainWindow::fetchWeatherData();
-
 }
 
 
 void MainWindow::on_Btn_Menu_6_clicked()
 {
     ui->Windows_Widget->setCurrentIndex(DRAW);
+
 }
 
 
 void MainWindow::on_Btn_Menu_7_clicked()
 {
     ui->Windows_Widget->setCurrentIndex(SPOTIFY);
+
 }
 
 void MainWindow::updateLCDWithTime(const QTime &time)
@@ -129,6 +135,8 @@ void MainWindow::fetchWeatherData() {
     QNetworkAccessManager Manager;
     //En el URL de abajo la latitud y longitud son los numero que aparecen. habria que convertirlos automaticamente al lugar de donde este la
     //computadora. Ademas hacer la Key como variable global.
+
+
     QUrl APIUrl("https://api.openweathermap.org/data/2.5/weather?lat=-34.6037&lon=-58.3816&appid=87492aebac99f1806c24cf14c9274227&units=metric");
     QNetworkRequest request(APIUrl);
 
@@ -158,12 +166,17 @@ void MainWindow::fetchWeatherData() {
 
         // Mostrar variables
         ui->lineEdit_Ciudad->setText(cityName);
-        qDebug() << "City Name:" << cityName;
-        qDebug() << "Temperature:" << temperature;
-        qDebug() << "Feels Like:" << feelsLike;
-        qDebug() << "Humidity:" << humidity;
-        qDebug() << "Wind Speed:" << windSpeed;
-        qDebug() << "Weather Description:" << weatherDescription;
+
+        ui->lineEdit_Tempe->setText(QString::number(temperature));
+
+        ui->lineEdit_Sensacion->setText(QString::number(feelsLike));
+
+        ui->lineEdit_Humedad->setText(QString::number(humidity));
+
+        ui->lineEdit_Viento->setText(QString::number(windSpeed));
+
+        ui->lineEdit_Descripcion->setText(weatherDescription);
+
     } else {
         qDebug() << "Error :" << reply->errorString();
     }
