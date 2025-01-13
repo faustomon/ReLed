@@ -202,6 +202,9 @@ border: 0px solid;</string>
              <height>0</height>
             </size>
            </property>
+           <property name="layoutDirection">
+            <enum>Qt::LayoutDirection::RightToLeft</enum>
+           </property>
            <property name="styleSheet">
             <string notr="true">background-color: rgb(43, 43, 43);</string>
            </property>
@@ -227,7 +230,7 @@ border: 0px solid;</string>
             <property name="bottomMargin">
              <number>0</number>
             </property>
-            <item alignment="Qt::AlignmentFlag::Qt::AlignmentFlag::AlignTop">
+            <item alignment="Qt::AlignmentFlag::AlignTop">
              <widget class="QFrame" name="Frame_Botonera">
               <property name="maximumSize">
                <size>
@@ -235,11 +238,20 @@ border: 0px solid;</string>
                 <height>16777215</height>
                </size>
               </property>
+              <property name="tabletTracking">
+               <bool>false</bool>
+              </property>
+              <property name="layoutDirection">
+               <enum>Qt::LayoutDirection::RightToLeft</enum>
+              </property>
               <property name="frameShape">
                <enum>QFrame::Shape::NoFrame</enum>
               </property>
               <property name="frameShadow">
                <enum>QFrame::Shadow::Raised</enum>
+              </property>
+              <property name="lineWidth">
+               <number>1</number>
               </property>
               <layout class="QVBoxLayout" name="verticalLayout_4">
                <property name="spacing">
@@ -336,32 +348,6 @@ QPushButton:hover
                 </widget>
                </item>
                <item>
-                <widget class="QPushButton" name="Btn_Menu_4">
-                 <property name="minimumSize">
-                  <size>
-                   <width>70</width>
-                   <height>40</height>
-                  </size>
-                 </property>
-                 <property name="styleSheet">
-                  <string notr="true">QPushButton
-{
-	color: rgb(255, 255, 255);
-	background-color: rgb(43, 43, 43);
-	border: 0px solid;
-}
-
-QPushButton:hover
-{
-	background-color: rgb(70, 0, 170);
-}</string>
-                 </property>
-                 <property name="text">
-                  <string>Crono</string>
-                 </property>
-                </widget>
-               </item>
-               <item>
                 <widget class="QPushButton" name="Btn_Menu_5">
                  <property name="minimumSize">
                   <size>
@@ -387,58 +373,6 @@ QPushButton:hover
                  </property>
                 </widget>
                </item>
-               <item>
-                <widget class="QPushButton" name="Btn_Menu_6">
-                 <property name="minimumSize">
-                  <size>
-                   <width>70</width>
-                   <height>40</height>
-                  </size>
-                 </property>
-                 <property name="styleSheet">
-                  <string notr="true">QPushButton
-{
-	color: rgb(255, 255, 255);
-	background-color: rgb(43, 43, 43);
-	border: 0px solid;
-}
-
-QPushButton:hover
-{
-	background-color: rgb(70, 0, 170);
-}</string>
-                 </property>
-                 <property name="text">
-                  <string>Draw</string>
-                 </property>
-                </widget>
-               </item>
-               <item>
-                <widget class="QPushButton" name="Btn_Menu_7">
-                 <property name="minimumSize">
-                  <size>
-                   <width>70</width>
-                   <height>40</height>
-                  </size>
-                 </property>
-                 <property name="styleSheet">
-                  <string notr="true">QPushButton
-{
-	color: rgb(255, 255, 255);
-	background-color: rgb(43, 43, 43);
-	border: 0px solid;
-}
-
-QPushButton:hover
-{
-	background-color: rgb(70, 0, 170);
-}</string>
-                 </property>
-                 <property name="text">
-                  <string>Spotify</string>
-                 </property>
-                </widget>
-               </item>
               </layout>
              </widget>
             </item>
@@ -456,68 +390,61 @@ QPushButton:hover
            <layout class="QVBoxLayout" name="verticalLayout_2">
             <item>
              <widget class="QStackedWidget" name="Windows_Widget">
+              <property name="currentIndex">
+               <number>3</number>
+              </property>
               <widget class="QWidget" name="page_1_Home">
-               <widget class="QTextEdit" name="textEdit">
+               <widget class="QLabel" name="label_19">
                 <property name="geometry">
                  <rect>
-                  <x>490</x>
-                  <y>0</y>
-                  <width>361</width>
-                  <height>121</height>
+                  <x>-8</x>
+                  <y>-11</y>
+                  <width>921</width>
+                  <height>451</height>
                  </rect>
                 </property>
-                <property name="html">
-                 <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
-&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;meta charset=&quot;utf-8&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
-p, li { white-space: pre-wrap; }
-hr { height: 1px; border-width: 0; }
-li.unchecked::marker { content: &quot;\2610&quot;; }
-li.checked::marker { content: &quot;\2612&quot;; }
-&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'Segoe UI'; font-size:9pt; font-weight:400; font-style:normal;&quot;&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Pagina Principal&lt;br /&gt;Donde se muestra lo que se esta viendo en el reloj&lt;/p&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;br /&gt;Ademas te da a elegir que pestanas queres ver&lt;br /&gt;Si queres que se auto scrollee o no &lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                <property name="font">
+                 <font>
+                  <family>Berlin Sans FB</family>
+                  <pointsize>72</pointsize>
+                 </font>
+                </property>
+                <property name="text">
+                 <string>RELED</string>
+                </property>
+                <property name="alignment">
+                 <set>Qt::AlignmentFlag::AlignCenter</set>
+                </property>
+               </widget>
+               <widget class="QLabel" name="label_20">
+                <property name="geometry">
+                 <rect>
+                  <x>-10</x>
+                  <y>280</y>
+                  <width>906</width>
+                  <height>18</height>
+                 </rect>
+                </property>
+                <property name="font">
+                 <font>
+                  <family>Berlin Sans FB</family>
+                  <pointsize>10</pointsize>
+                 </font>
+                </property>
+                <property name="text">
+                 <string>Bienvenido a la configuacion de RELED</string>
+                </property>
+                <property name="alignment">
+                 <set>Qt::AlignmentFlag::AlignCenter</set>
                 </property>
                </widget>
               </widget>
               <widget class="QWidget" name="page_2_Clock">
-               <widget class="QTextEdit" name="textEdit_2">
-                <property name="geometry">
-                 <rect>
-                  <x>460</x>
-                  <y>0</y>
-                  <width>421</width>
-                  <height>141</height>
-                 </rect>
-                </property>
-                <property name="html">
-                 <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
-&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;meta charset=&quot;utf-8&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
-p, li { white-space: pre-wrap; }
-hr { height: 1px; border-width: 0; }
-li.unchecked::marker { content: &quot;\2610&quot;; }
-li.checked::marker { content: &quot;\2612&quot;; }
-&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'Segoe UI'; font-size:9pt; font-weight:400; font-style:normal;&quot;&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;PAginca clock&lt;br /&gt;Aca configuramos la hora&lt;br /&gt;-elegir si queremos que synquee oponerla manualmente &lt;br /&gt;idealmente dar a alegir entre una lista de a paises&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
-                </property>
-               </widget>
-               <widget class="QLabel" name="label">
-                <property name="geometry">
-                 <rect>
-                  <x>10</x>
-                  <y>70</y>
-                  <width>311</width>
-                  <height>20</height>
-                 </rect>
-                </property>
-                <property name="text">
-                 <string>Establecer la zona horaria automaticamente </string>
-                </property>
-               </widget>
                <widget class="QLCDNumber" name="lcdNumber">
                 <property name="geometry">
                  <rect>
-                  <x>90</x>
-                  <y>0</y>
+                  <x>340</x>
+                  <y>50</y>
                   <width>171</width>
                   <height>61</height>
                  </rect>
@@ -526,21 +453,21 @@ li.checked::marker { content: &quot;\2612&quot;; }
                <widget class="QCheckBox" name="CheckBox_TimeZoneEnable">
                 <property name="geometry">
                  <rect>
-                  <x>300</x>
-                  <y>60</y>
-                  <width>93</width>
+                  <x>330</x>
+                  <y>150</y>
+                  <width>211</width>
                   <height>26</height>
                  </rect>
                 </property>
                 <property name="text">
-                 <string/>
+                 <string>Establcer hora automaticamente</string>
                 </property>
                </widget>
                <widget class="QTimeEdit" name="timeEdit">
                 <property name="geometry">
                  <rect>
-                  <x>220</x>
-                  <y>110</y>
+                  <x>360</x>
+                  <y>240</y>
                   <width>118</width>
                   <height>29</height>
                  </rect>
@@ -549,8 +476,8 @@ li.checked::marker { content: &quot;\2612&quot;; }
                <widget class="QLabel" name="label_2">
                 <property name="geometry">
                  <rect>
-                  <x>10</x>
-                  <y>110</y>
+                  <x>360</x>
+                  <y>210</y>
                   <width>161</width>
                   <height>20</height>
                  </rect>
@@ -559,111 +486,471 @@ li.checked::marker { content: &quot;\2612&quot;; }
                  <string>Ingresar manualmente</string>
                 </property>
                </widget>
-              </widget>
-              <widget class="QWidget" name="page_3_alarm">
-               <widget class="QTextEdit" name="textEdit_11">
+               <widget class="QPushButton" name="pushButton_confirmarDatos_2">
                 <property name="geometry">
                  <rect>
-                  <x>490</x>
-                  <y>20</y>
-                  <width>351</width>
+                  <x>370</x>
+                  <y>330</y>
+                  <width>111</width>
+                  <height>24</height>
+                 </rect>
+                </property>
+                <property name="text">
+                 <string>Confirmar Cambios</string>
+                </property>
+               </widget>
+               <widget class="QLabel" name="label_DatosGuardados_2">
+                <property name="geometry">
+                 <rect>
+                  <x>260</x>
+                  <y>370</y>
+                  <width>341</width>
+                  <height>20</height>
+                 </rect>
+                </property>
+                <property name="text">
+                 <string>Presione para guardar los cambios</string>
+                </property>
+                <property name="alignment">
+                 <set>Qt::AlignmentFlag::AlignCenter</set>
+                </property>
+               </widget>
+               <widget class="QLabel" name="label_21">
+                <property name="geometry">
+                 <rect>
+                  <x>0</x>
+                  <y>0</y>
+                  <width>911</width>
+                  <height>41</height>
+                 </rect>
+                </property>
+                <property name="font">
+                 <font>
+                  <family>Berlin Sans FB</family>
+                  <pointsize>30</pointsize>
+                 </font>
+                </property>
+                <property name="text">
+                 <string>CLOCK</string>
+                </property>
+                <property name="alignment">
+                 <set>Qt::AlignmentFlag::AlignLeading|Qt::AlignmentFlag::AlignLeft|Qt::AlignmentFlag::AlignVCenter</set>
+                </property>
+               </widget>
+              </widget>
+              <widget class="QWidget" name="page_3_alarm">
+               <widget class="QCheckBox" name="checkBox_buzzer">
+                <property name="geometry">
+                 <rect>
+                  <x>180</x>
+                  <y>280</y>
+                  <width>78</width>
+                  <height>22</height>
+                 </rect>
+                </property>
+                <property name="text">
+                 <string>Buzzer</string>
+                </property>
+               </widget>
+               <widget class="QLCDNumber" name="lcdnumber_alarma">
+                <property name="geometry">
+                 <rect>
+                  <x>340</x>
+                  <y>10</y>
+                  <width>181</width>
                   <height>71</height>
                  </rect>
                 </property>
-                <property name="html">
-                 <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
-&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;meta charset=&quot;utf-8&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
-p, li { white-space: pre-wrap; }
-hr { height: 1px; border-width: 0; }
-li.unchecked::marker { content: &quot;\2610&quot;; }
-li.checked::marker { content: &quot;\2612&quot;; }
-&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'Segoe UI'; font-size:9pt; font-weight:400; font-style:normal;&quot;&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Pagina Alarma&lt;/p&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Aca configuramos las alarmas y la opcion de amanecer&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+               </widget>
+               <widget class="QLabel" name="label_9">
+                <property name="geometry">
+                 <rect>
+                  <x>330</x>
+                  <y>220</y>
+                  <width>381</width>
+                  <height>21</height>
+                 </rect>
+                </property>
+                <property name="text">
+                 <string>Enciende un LED de manera suave cuando la alarma llegue a su tiempo.</string>
+                </property>
+               </widget>
+               <widget class="QTimeEdit" name="timeEdit_configAlarma">
+                <property name="geometry">
+                 <rect>
+                  <x>360</x>
+                  <y>90</y>
+                  <width>141</width>
+                  <height>25</height>
+                 </rect>
+                </property>
+                <property name="alignment">
+                 <set>Qt::AlignmentFlag::AlignCenter</set>
+                </property>
+               </widget>
+               <widget class="QCheckBox" name="checkBox_amanecer">
+                <property name="geometry">
+                 <rect>
+                  <x>180</x>
+                  <y>220</y>
+                  <width>78</width>
+                  <height>22</height>
+                 </rect>
+                </property>
+                <property name="text">
+                 <string>Amanecer</string>
+                </property>
+               </widget>
+               <widget class="QLabel" name="label_10">
+                <property name="geometry">
+                 <rect>
+                  <x>330</x>
+                  <y>280</y>
+                  <width>381</width>
+                  <height>21</height>
+                 </rect>
+                </property>
+                <property name="text">
+                 <string>Cuando la alarma llegue a su horario hace sonar un buzzer.</string>
+                </property>
+               </widget>
+               <widget class="QPushButton" name="pushButton_confirmarDatos">
+                <property name="geometry">
+                 <rect>
+                  <x>370</x>
+                  <y>350</y>
+                  <width>111</width>
+                  <height>24</height>
+                 </rect>
+                </property>
+                <property name="text">
+                 <string>Confirmar Cambios</string>
+                </property>
+               </widget>
+               <widget class="QLabel" name="label_DatosGuardados">
+                <property name="geometry">
+                 <rect>
+                  <x>260</x>
+                  <y>390</y>
+                  <width>341</width>
+                  <height>20</height>
+                 </rect>
+                </property>
+                <property name="text">
+                 <string>Presione para guardar los cambios</string>
+                </property>
+                <property name="alignment">
+                 <set>Qt::AlignmentFlag::AlignCenter</set>
+                </property>
+               </widget>
+               <widget class="QLabel" name="label_11">
+                <property name="geometry">
+                 <rect>
+                  <x>330</x>
+                  <y>160</y>
+                  <width>381</width>
+                  <height>21</height>
+                 </rect>
+                </property>
+                <property name="text">
+                 <string>Deja habilitada / desabilitada la alarma.</string>
+                </property>
+               </widget>
+               <widget class="QCheckBox" name="checkBox_alarma">
+                <property name="geometry">
+                 <rect>
+                  <x>180</x>
+                  <y>160</y>
+                  <width>78</width>
+                  <height>22</height>
+                 </rect>
+                </property>
+                <property name="text">
+                 <string>Alarma</string>
+                </property>
+               </widget>
+               <widget class="QLabel" name="label_22">
+                <property name="geometry">
+                 <rect>
+                  <x>0</x>
+                  <y>0</y>
+                  <width>211</width>
+                  <height>41</height>
+                 </rect>
+                </property>
+                <property name="font">
+                 <font>
+                  <family>Berlin Sans FB</family>
+                  <pointsize>30</pointsize>
+                 </font>
+                </property>
+                <property name="text">
+                 <string>ALARMA</string>
+                </property>
+                <property name="alignment">
+                 <set>Qt::AlignmentFlag::AlignLeading|Qt::AlignmentFlag::AlignLeft|Qt::AlignmentFlag::AlignVCenter</set>
                 </property>
                </widget>
               </widget>
               <widget class="QWidget" name="page_4_timer">
-               <widget class="QTextEdit" name="textEdit_12">
+               <widget class="QLabel" name="label">
                 <property name="geometry">
                  <rect>
-                  <x>500</x>
+                  <x>360</x>
+                  <y>160</y>
+                  <width>181</width>
+                  <height>21</height>
+                 </rect>
+                </property>
+                <property name="text">
+                 <string>Introduzca un tiempo actividad</string>
+                </property>
+                <property name="alignment">
+                 <set>Qt::AlignmentFlag::AlignCenter</set>
+                </property>
+               </widget>
+               <widget class="QLabel" name="label_13">
+                <property name="geometry">
+                 <rect>
+                  <x>360</x>
+                  <y>100</y>
+                  <width>421</width>
+                  <height>20</height>
+                 </rect>
+                </property>
+                <property name="text">
+                 <string>Configuración temporizador pomodoro</string>
+                </property>
+                <property name="alignment">
+                 <set>Qt::AlignmentFlag::AlignCenter</set>
+                </property>
+               </widget>
+               <widget class="QLabel" name="label_14">
+                <property name="geometry">
+                 <rect>
+                  <x>610</x>
+                  <y>160</y>
+                  <width>181</width>
+                  <height>21</height>
+                 </rect>
+                </property>
+                <property name="text">
+                 <string>Introduzca un tiempo descanso </string>
+                </property>
+                <property name="alignment">
+                 <set>Qt::AlignmentFlag::AlignCenter</set>
+                </property>
+               </widget>
+               <widget class="QLCDNumber" name="lcdnumber_PomodoroWork">
+                <property name="geometry">
+                 <rect>
+                  <x>390</x>
+                  <y>200</y>
+                  <width>121</width>
+                  <height>41</height>
+                 </rect>
+                </property>
+               </widget>
+               <widget class="QTimeEdit" name="timeEdit_PomodoroWork">
+                <property name="geometry">
+                 <rect>
+                  <x>390</x>
+                  <y>250</y>
+                  <width>118</width>
+                  <height>25</height>
+                 </rect>
+                </property>
+                <property name="maximumTime">
+                 <time>
+                  <hour>0</hour>
+                  <minute>59</minute>
+                  <second>59</second>
+                 </time>
+                </property>
+                <property name="currentSection">
+                 <enum>QDateTimeEdit::Section::MinuteSection</enum>
+                </property>
+                <property name="displayFormat">
+                 <string>mm:ss</string>
+                </property>
+               </widget>
+               <widget class="QTimeEdit" name="timeEdit_PomodoroBreak">
+                <property name="geometry">
+                 <rect>
+                  <x>640</x>
+                  <y>250</y>
+                  <width>118</width>
+                  <height>25</height>
+                 </rect>
+                </property>
+                <property name="maximumTime">
+                 <time>
+                  <hour>0</hour>
+                  <minute>59</minute>
+                  <second>59</second>
+                 </time>
+                </property>
+                <property name="currentSection">
+                 <enum>QDateTimeEdit::Section::MinuteSection</enum>
+                </property>
+                <property name="displayFormat">
+                 <string>mm:ss</string>
+                </property>
+               </widget>
+               <widget class="QLCDNumber" name="lcdNumber_PomodoroBreak">
+                <property name="geometry">
+                 <rect>
+                  <x>640</x>
+                  <y>200</y>
+                  <width>121</width>
+                  <height>41</height>
+                 </rect>
+                </property>
+               </widget>
+               <widget class="QTimeEdit" name="timeEdit_Temporizador">
+                <property name="geometry">
+                 <rect>
+                  <x>130</x>
+                  <y>250</y>
+                  <width>118</width>
+                  <height>25</height>
+                 </rect>
+                </property>
+                <property name="maximumTime">
+                 <time>
+                  <hour>0</hour>
+                  <minute>59</minute>
+                  <second>59</second>
+                 </time>
+                </property>
+                <property name="displayFormat">
+                 <string>mm:ss</string>
+                </property>
+               </widget>
+               <widget class="QLabel" name="label_15">
+                <property name="geometry">
+                 <rect>
+                  <x>70</x>
+                  <y>160</y>
+                  <width>261</width>
+                  <height>21</height>
+                 </rect>
+                </property>
+                <property name="text">
+                 <string>Introduzca un tiempo predeterminado del timer</string>
+                </property>
+               </widget>
+               <widget class="QLCDNumber" name="lcdNumber_Temporizador">
+                <property name="geometry">
+                 <rect>
+                  <x>130</x>
+                  <y>200</y>
+                  <width>121</width>
+                  <height>41</height>
+                 </rect>
+                </property>
+               </widget>
+               <widget class="QLabel" name="label_16">
+                <property name="geometry">
+                 <rect>
+                  <x>60</x>
+                  <y>100</y>
+                  <width>261</width>
+                  <height>20</height>
+                 </rect>
+                </property>
+                <property name="text">
+                 <string>Configuración temporizador predeterminado</string>
+                </property>
+                <property name="alignment">
+                 <set>Qt::AlignmentFlag::AlignCenter</set>
+                </property>
+               </widget>
+               <widget class="QLabel" name="label_17">
+                <property name="geometry">
+                 <rect>
+                  <x>-10</x>
                   <y>20</y>
-                  <width>381</width>
-                  <height>111</height>
+                  <width>931</width>
+                  <height>20</height>
                  </rect>
                 </property>
-                <property name="html">
-                 <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
-&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;meta charset=&quot;utf-8&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
-p, li { white-space: pre-wrap; }
-hr { height: 1px; border-width: 0; }
-li.unchecked::marker { content: &quot;\2610&quot;; }
-li.checked::marker { content: &quot;\2612&quot;; }
-&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'Segoe UI'; font-size:9pt; font-weight:400; font-style:normal;&quot;&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Pagina Timer&lt;/p&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Aca congifuramos los timer incluso los pomodoro&lt;br /&gt;&lt;br /&gt;Aca te deja arrancar timers y configurar tu pomodoro por eleccion&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                <property name="text">
+                 <string>CONFIGURACIÓN TIMERS</string>
+                </property>
+                <property name="alignment">
+                 <set>Qt::AlignmentFlag::AlignCenter</set>
                 </property>
                </widget>
-              </widget>
-              <widget class="QWidget" name="page_5_crono">
-               <widget class="QTextEdit" name="textEdit_5">
+               <widget class="QPushButton" name="pushButton_datosTimer">
                 <property name="geometry">
                  <rect>
-                  <x>470</x>
-                  <y>10</y>
-                  <width>381</width>
-                  <height>91</height>
+                  <x>390</x>
+                  <y>340</y>
+                  <width>121</width>
+                  <height>24</height>
                  </rect>
                 </property>
-                <property name="html">
-                 <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
-&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;meta charset=&quot;utf-8&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
-p, li { white-space: pre-wrap; }
-hr { height: 1px; border-width: 0; }
-li.unchecked::marker { content: &quot;\2610&quot;; }
-li.checked::marker { content: &quot;\2612&quot;; }
-&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'Segoe UI'; font-size:9pt; font-weight:400; font-style:normal;&quot;&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Pagina Crono&lt;br /&gt;&lt;br /&gt;Te deja arrancar un cronometro pausarlo y la mar en coche&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                <property name="text">
+                 <string>Confirmar cambios</string>
+                </property>
+               </widget>
+               <widget class="QLabel" name="label_datosTimer">
+                <property name="geometry">
+                 <rect>
+                  <x>360</x>
+                  <y>370</y>
+                  <width>181</width>
+                  <height>16</height>
+                 </rect>
+                </property>
+                <property name="text">
+                 <string>Presione para guardar los cambios</string>
+                </property>
+                <property name="alignment">
+                 <set>Qt::AlignmentFlag::AlignCenter</set>
+                </property>
+               </widget>
+               <widget class="QLabel" name="label_23">
+                <property name="geometry">
+                 <rect>
+                  <x>0</x>
+                  <y>0</y>
+                  <width>141</width>
+                  <height>41</height>
+                 </rect>
+                </property>
+                <property name="font">
+                 <font>
+                  <family>Berlin Sans FB</family>
+                  <pointsize>30</pointsize>
+                 </font>
+                </property>
+                <property name="text">
+                 <string>TIMER</string>
+                </property>
+                <property name="alignment">
+                 <set>Qt::AlignmentFlag::AlignLeading|Qt::AlignmentFlag::AlignLeft|Qt::AlignmentFlag::AlignVCenter</set>
                 </property>
                </widget>
               </widget>
+              <widget class="QWidget" name="page_5_crono"/>
               <widget class="QWidget" name="page_6_clima">
                <widget class="QLineEdit" name="lineEdit_Viento">
                 <property name="geometry">
                  <rect>
-                  <x>0</x>
-                  <y>170</y>
+                  <x>330</x>
+                  <y>230</y>
                   <width>141</width>
                   <height>28</height>
                  </rect>
                 </property>
                </widget>
-               <widget class="QTextEdit" name="textEdit_6">
-                <property name="geometry">
-                 <rect>
-                  <x>500</x>
-                  <y>0</y>
-                  <width>381</width>
-                  <height>111</height>
-                 </rect>
-                </property>
-                <property name="html">
-                 <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
-&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;meta charset=&quot;utf-8&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
-p, li { white-space: pre-wrap; }
-hr { height: 1px; border-width: 0; }
-li.unchecked::marker { content: &quot;\2610&quot;; }
-li.checked::marker { content: &quot;\2612&quot;; }
-&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'Segoe UI'; font-size:9pt; font-weight:400; font-style:normal;&quot;&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Pagina Clima&lt;br /&gt;Te deja configurar que cosas queres ver del clima. Y tambien la locacion de donde queres ver el clima. y alguna funcionalidad que se les ocurra&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
-                </property>
-               </widget>
                <widget class="QLineEdit" name="lineEdit_Sensacion">
                 <property name="geometry">
                  <rect>
-                  <x>0</x>
-                  <y>100</y>
+                  <x>500</x>
+                  <y>170</y>
                   <width>141</width>
                   <height>28</height>
                  </rect>
@@ -672,8 +959,8 @@ li.checked::marker { content: &quot;\2612&quot;; }
                <widget class="QLabel" name="label_3">
                 <property name="geometry">
                  <rect>
-                  <x>0</x>
-                  <y>0</y>
+                  <x>170</x>
+                  <y>140</y>
                   <width>101</width>
                   <height>20</height>
                  </rect>
@@ -685,8 +972,8 @@ li.checked::marker { content: &quot;\2612&quot;; }
                <widget class="QLineEdit" name="lineEdit_Tempe">
                 <property name="geometry">
                  <rect>
-                  <x>170</x>
-                  <y>30</y>
+                  <x>330</x>
+                  <y>170</y>
                   <width>151</width>
                   <height>28</height>
                  </rect>
@@ -695,8 +982,8 @@ li.checked::marker { content: &quot;\2612&quot;; }
                <widget class="QLabel" name="label_4">
                 <property name="geometry">
                  <rect>
-                  <x>170</x>
-                  <y>0</y>
+                  <x>330</x>
+                  <y>140</y>
                   <width>91</width>
                   <height>20</height>
                  </rect>
@@ -709,7 +996,7 @@ li.checked::marker { content: &quot;\2612&quot;; }
                 <property name="geometry">
                  <rect>
                   <x>170</x>
-                  <y>70</y>
+                  <y>200</y>
                   <width>71</width>
                   <height>20</height>
                  </rect>
@@ -721,8 +1008,8 @@ li.checked::marker { content: &quot;\2612&quot;; }
                <widget class="QLabel" name="label_8">
                 <property name="geometry">
                  <rect>
-                  <x>0</x>
-                  <y>140</y>
+                  <x>330</x>
+                  <y>200</y>
                   <width>141</width>
                   <height>20</height>
                  </rect>
@@ -734,8 +1021,8 @@ li.checked::marker { content: &quot;\2612&quot;; }
                <widget class="QLineEdit" name="lineEdit_Ciudad">
                 <property name="geometry">
                  <rect>
-                  <x>0</x>
-                  <y>30</y>
+                  <x>170</x>
+                  <y>170</y>
                   <width>141</width>
                   <height>28</height>
                  </rect>
@@ -744,8 +1031,8 @@ li.checked::marker { content: &quot;\2612&quot;; }
                <widget class="QLineEdit" name="lineEdit_Descripcion">
                 <property name="geometry">
                  <rect>
-                  <x>170</x>
-                  <y>170</y>
+                  <x>500</x>
+                  <y>230</y>
                   <width>231</width>
                   <height>31</height>
                  </rect>
@@ -755,8 +1042,8 @@ li.checked::marker { content: &quot;\2612&quot;; }
                 <property name="geometry">
                  <rect>
                   <x>170</x>
-                  <y>100</y>
-                  <width>151</width>
+                  <y>230</y>
+                  <width>141</width>
                   <height>28</height>
                  </rect>
                 </property>
@@ -764,8 +1051,8 @@ li.checked::marker { content: &quot;\2612&quot;; }
                <widget class="QLabel" name="label_7">
                 <property name="geometry">
                  <rect>
-                  <x>170</x>
-                  <y>140</y>
+                  <x>500</x>
+                  <y>200</y>
                   <width>151</width>
                   <height>20</height>
                  </rect>
@@ -774,31 +1061,11 @@ li.checked::marker { content: &quot;\2612&quot;; }
                  <string>Descripcion del clima</string>
                 </property>
                </widget>
-               <widget class="QTextEdit" name="textEdit_10">
-                <property name="geometry">
-                 <rect>
-                  <x>500</x>
-                  <y>120</y>
-                  <width>191</width>
-                  <height>31</height>
-                 </rect>
-                </property>
-                <property name="html">
-                 <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
-&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;meta charset=&quot;utf-8&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
-p, li { white-space: pre-wrap; }
-hr { height: 1px; border-width: 0; }
-li.unchecked::marker { content: &quot;\2610&quot;; }
-li.checked::marker { content: &quot;\2612&quot;; }
-&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'Segoe UI'; font-size:9pt; font-weight:400; font-style:normal;&quot;&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Falta la api del pronostico &lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
-                </property>
-               </widget>
                <widget class="QLabel" name="label_5">
                 <property name="geometry">
                  <rect>
-                  <x>0</x>
-                  <y>70</y>
+                  <x>500</x>
+                  <y>140</y>
                   <width>131</width>
                   <height>20</height>
                  </rect>
@@ -807,51 +1074,31 @@ li.checked::marker { content: &quot;\2612&quot;; }
                  <string>Sensacion Termica</string>
                 </property>
                </widget>
-              </widget>
-              <widget class="QWidget" name="page_7_draw">
-               <widget class="QTextEdit" name="textEdit_7">
+               <widget class="QLabel" name="label_24">
                 <property name="geometry">
                  <rect>
-                  <x>500</x>
-                  <y>30</y>
-                  <width>381</width>
-                  <height>111</height>
+                  <x>0</x>
+                  <y>0</y>
+                  <width>211</width>
+                  <height>41</height>
                  </rect>
                 </property>
-                <property name="html">
-                 <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
-&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;meta charset=&quot;utf-8&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
-p, li { white-space: pre-wrap; }
-hr { height: 1px; border-width: 0; }
-li.unchecked::marker { content: &quot;\2610&quot;; }
-li.checked::marker { content: &quot;\2612&quot;; }
-&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'Segoe UI'; font-size:9pt; font-weight:400; font-style:normal;&quot;&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Pagina Draw&lt;br /&gt;Aca la idea es que pueda el usuario poner un un dibujito &lt;br /&gt;Estuve viendo que un loquito hacia una matrices en qt&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                <property name="font">
+                 <font>
+                  <family>Berlin Sans FB</family>
+                  <pointsize>30</pointsize>
+                 </font>
+                </property>
+                <property name="text">
+                 <string>CLIMA</string>
+                </property>
+                <property name="alignment">
+                 <set>Qt::AlignmentFlag::AlignLeading|Qt::AlignmentFlag::AlignLeft|Qt::AlignmentFlag::AlignVCenter</set>
                 </property>
                </widget>
               </widget>
-              <widget class="QWidget" name="page_8_spotify">
-               <widget class="QTextEdit" name="textEdit_8">
-                <property name="geometry">
-                 <rect>
-                  <x>480</x>
-                  <y>10</y>
-                  <width>381</width>
-                  <height>111</height>
-                 </rect>
-                </property>
-                <property name="html">
-                 <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
-&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;meta charset=&quot;utf-8&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
-p, li { white-space: pre-wrap; }
-hr { height: 1px; border-width: 0; }
-li.unchecked::marker { content: &quot;\2610&quot;; }
-li.checked::marker { content: &quot;\2612&quot;; }
-&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'Segoe UI'; font-size:9pt; font-weight:400; font-style:normal;&quot;&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Pagina Spotify&lt;br /&gt;&lt;br /&gt;Aca deberiamos configurar lo que necesite la app de spotify. y quisas mostrarte dato de la cancion actual pero realmente nose&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
-                </property>
-               </widget>
-              </widget>
+              <widget class="QWidget" name="page_7_draw"/>
+              <widget class="QWidget" name="page_8_spotify"/>
              </widget>
             </item>
            </layout>
